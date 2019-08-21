@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  web:
+    container_name: srv-awstats
+    image: jorarmarfin/awstats:0.1
+    volumes:
+      - ./awstats/config:/etc/awstats/
+      - ./awstats/logs:/var/mylog/
+    ports:
+      - 9005:80
